@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'mallapi',
     'mall',
+    'sers',
 ]
 
 MIDDLEWARE = [
