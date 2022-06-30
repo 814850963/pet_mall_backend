@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mallapi',
     'mall',
     'sers',
+    'viewsettest',
 ]
 
 MIDDLEWARE = [

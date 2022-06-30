@@ -7,7 +7,7 @@ class Student(models.Model):
     # 模型字段
     name = models.CharField(max_length=100, verbose_name="xingming")
     sex = models.BooleanField(default=1, verbose_name="sex")
-    age = models.IntegerField(verbose_name="age")
+    age = models.IntegerField(verbose_name="age", null=True)
     class_num = models.CharField(max_length=5, verbose_name="class num")
     description = models.TextField(max_length=1000, verbose_name="person description")
 

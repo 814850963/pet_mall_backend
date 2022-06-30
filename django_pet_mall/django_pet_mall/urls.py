@@ -21,4 +21,5 @@ urlpatterns = [
     path('api/', include('mallapi.urls')),
     path('api/', include('mall.urls')),
     path('sers/', include('sers.urls')),
+    path('demo/', include('viewsettest.urls')),
 ]
