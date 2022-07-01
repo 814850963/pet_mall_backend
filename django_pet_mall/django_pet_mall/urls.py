@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/', include('mall.urls')),
     path('sers/', include('sers.urls')),
     path('demo/', include('viewsettest.urls')),
+    path('school/',include('school.urls')),
 ]

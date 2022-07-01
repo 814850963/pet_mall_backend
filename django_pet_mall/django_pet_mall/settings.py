@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mall',
     'sers',
     'viewsettest',
+    'school',
 ]
 
 MIDDLEWARE = [
