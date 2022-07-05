@@ -13,6 +13,15 @@ class Student(models.Model):
 
     def __str__(self) -> str:
         return self.name
+    """
+    自己处理信息
+    """
+    @property
+    def achievement(self):
+        """拿到对象"""
+        queryset = self.s_achievement.values("course__teacher__name","course__name","score")
+        print(self.s_achievement.values())
+        return queryset
 
 class Course(models.Model):
     name = models.CharField(max_length=50, verbose_name="课程名称")
@@ -45,7 +54,7 @@ class Achievement(models.Model):
 
     def __str__(self) -> str:
         return self.name
-        
+
 
 
 

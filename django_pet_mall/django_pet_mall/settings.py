@@ -131,3 +131,21 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES' : {
+        'rest_framework.authentication.SessionAuthentication', # session
+        'rest_framework.authentication.BasicAuthentication', # basic
+    },
+    'DEFAULT_PERMISSION_CALSSES': {
+        'rest_framework.permissions.IsAuthenticated',
+    },
+    'DEFAULT_THROTTLE_CLASSES':[
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES':{
+        'anon':'2/day', #针对访问频率进行限流
+        'user':'5/day', 
+    }
+}

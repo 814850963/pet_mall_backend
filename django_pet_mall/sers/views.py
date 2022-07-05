@@ -3,7 +3,6 @@ from django.views import View
 from django.http.response import JsonResponse
 from .serializers import StudentSerializer, StudentSerializer1
 from mallapi.models import Student
-
 # Create your views here.
 class StudentView(View):
     # def get(self, request):
