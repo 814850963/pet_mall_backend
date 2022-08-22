@@ -4,9 +4,13 @@
 ## memo：
 - Export mysql Data
 > https://kalacloud.com/blog/how-to-migrate-a-mysql-database-between-two-servers-aliyun-tencentyun/
-- Docker shares files with the host
+- Container shares files with the host
 > https://blog.csdn.net/xiangxianghehe/article/details/77131962
 - Linux command for uploading files to the server
 > https://blog.csdn.net/dc_726/article/details/8448868
 - MySQL executes.sql files
 > https://www.jianshu.com/p/e603abae317d
+- Dockerfile
+> https://www.jianshu.com/p/eebaf6e0cbb6
+- Docker-Compose.yml
+> https://docs.docker.com/samples/django/
