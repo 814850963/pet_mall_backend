@@ -3,7 +3,9 @@ version: "3.0"
 services:
   web:
     build: .
-    command: bash -c 'cd django_pet_mall && python manage.py runserver 0.0.0.0:8000'
+    command: >
+      bash -c 'cd django_pet_mall && 
+      python manage.py runserver 0.0.0.0:8000'
     volumes:
       - .:/code
     ports:
