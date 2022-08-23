@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'petmall',  # 数据库名，先前创建的
         'USER': 'root',     # 用户名，可以自己创建用户
         'PASSWORD': '123456',  # 密码
-        'HOST': '127.0.0.1',  # mysql服务所在的主机ip
+        'HOST': '161.129.34.120',  # mysql服务所在的主机ip
         'PORT': '3366',         # mysql服务端口
     }
 }
