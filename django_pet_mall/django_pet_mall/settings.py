@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-id63)44bbkh*g)02i*t6(3__2do-+r+#q=psi=%c5vfm!3$@xe
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '161.129.34.120',
-    'nagatoro.ml'
+ 'nagatoro.ml',
+ '161.129.34.120'
 ]
 
 
@@ -136,19 +136,19 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES' : {
+    'DEFAULT_AUTHENTICATION_CLASSES' : (
         'rest_framework.authentication.SessionAuthentication', # session
         'rest_framework.authentication.BasicAuthentication', # basic
-    },
-    'DEFAULT_PERMISSION_CALSSES': {
-        'rest_framework.permissions.IsAuthenticated',
-    },
-    'DEFAULT_THROTTLE_CLASSES':[
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle',
-    ],
-    'DEFAULT_THROTTLE_RATES':{
-        'anon':'2/day', #针对访问频率进行限流
-        'user':'5/day', 
-    }
+    ),
+    # 'DEFAULT_PERMISSION_CALSSES': {
+    #     'rest_framework.permissions.IsAuthenticated',
+    # },
+    # 'DEFAULT_THROTTLE_CLASSES':[
+    #     'rest_framework.throttling.AnonRateThrottle',
+    #     'rest_framework.throttling.UserRateThrottle',
+    # ],
+    # 'DEFAULT_THROTTLE_RATES':{
+    #     'anon':'2/day', #针对访问频率进行限流
+    #     'user':'5/day', 
+    # }
 }
