@@ -1,5 +1,5 @@
 # pet_mall_backend
-正在添加devops支持
+adding devops support
 
 ## memo：
 - Export mysql Data
