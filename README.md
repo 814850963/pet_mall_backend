@@ -1,5 +1,6 @@
 # pet_mall_backend
 adding devops support
+Deleting Sensitive Information
 
 ## memo：
 - Export mysql Data
@@ -17,3 +18,4 @@ adding devops support
 
 Constructs：
 ![devops drawio](https://user-images.githubusercontent.com/38637946/186574849-0f8b0e99-2d41-4a0a-a90c-37a5235f451a.png)
+
