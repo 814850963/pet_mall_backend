@@ -17,7 +17,6 @@ DELETE /students/<pk>/ 删除一个学生信息
 """
 class StudentView(View):
     """学生视图"""
-    @csrf_exempt
     def post(self,request):
         """
         添加一个学生信息

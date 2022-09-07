@@ -49,7 +49,7 @@ class StudentInfoMixinView(GenericAPIView, RetrieveModelMixin, UpdateModelMixin,
         return self.update(request, pk)
 
     def delete(self, request, pk):
-        return self.delete(request, pk)
+        return self.destroy(request, pk)
 
 class StudentViewSet(ViewSet):
     def get_list(self, request):

@@ -40,7 +40,3 @@ class StudentView(View):
         else:
             # print(serializer.errors)
             return JsonResponse(dict(serializer.errors))
-        # 2.操作数据库
-        data = serializer.data
-        # 3。返回结果
-        return JsonResponse(data=data, status=200, safe=False, json_dumps_params={"ensure_ascii": False})
