@@ -9,4 +9,4 @@ class StudentModelViewSet(ModelViewSet):
     serializer_class = BulkCreateSerializer
 
 def index(request):
-    return render(request)
+    return render(request, "index")
