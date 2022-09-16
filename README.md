@@ -1,7 +1,7 @@
 # pet_mall_backend
 adding devops support
 Deleting Sensitive Information
-add webhook to detect git push v12
+add webhook to detect git push v13
 
 ## memo：
 - Export mysql Data
