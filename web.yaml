@@ -1,0 +1,66 @@
+apiVersion: v1
+kind : Namespace
+metadata:
+  name: dev
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing-web
+  namespace: dev
+spec:
+  ingressClassName: web-example
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: svc-web
+            port:
+              number: 8001
+
+---
+
+apiVersion: v1
+kind : Service
+metadata:
+  name: svc-web
+  namespace: dev
+spec: 
+  ports:
+  - port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    run: web
+  type: NodePort
+
+---
+
+apiVersion: apps/v1
+kind : Deployment
+metadata:
+  name: dep-web
+  namespace: dev
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers:
+      - name: web-containers
+        image: 814850963/petmall_web:latest
+        ports: 
+        - containerPort: 8001
+        command: ["/bin/bash"]
+        args: ["-c", "cd /code/django_pet_mall;python manage.py runserver 0.0.0.0:8001"]
